@@ -8,5 +8,10 @@ class Renderer {
         const newHTML = template({ recipe })
         $('#results').append(newHTML);
     }
-
+    RenderIngredients = function (ingredients) {
+        const source = $("#ingredients-template").html()
+        const template = Handlebars.compile(source)
+        const newHTML = template({ ingredients })
+        $('.recipe').append(newHTML);
+    }
 }
