@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,13 +22,16 @@
     <script id="recipe-template" type="text/x-handlebars-template">
         {{#each recipe}}
         <div class="recipe">
-          <p id=title> {{title}}</p>
+          <p id=title><a id="video" href="{{href}}" target="_blank"> {{title}}</a>
+           </p>
           <div id="thumbnail">
             <img src="{{thumbnail}}" alt="">
           </div> 
-          <a id="video" href="{{href}}"></a>
           <ul id=ingredients>
-            <li>Ingredients : {{ingredients}}</li>  
+              <strong>Ingredients :</strong> 
+              {{#each ingredients}}
+            <li> {{this}}</li>  
+            {{/each}}
             </ul>
         </div>   
         {{/each}}

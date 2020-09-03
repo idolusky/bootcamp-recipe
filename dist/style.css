@@ -1,0 +1,28 @@
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap : 10px;
+}
+.recipe {
+    text-align: center;
+    display: grid;
+    background-color: rgb(238, 180, 74);
+}
+img {
+    max-width: 120px;
+    max-height: 120px;
+}
+#ingredients {
+    display: grid;
+    text-align: justify;
+}
+li {
+color: black;
+font-family: 'Courier New', Courier, monospace;
+}
+
+#title {
+font-family: 'Courier New', Courier, monospace;
+    font-size: 23px;
+}

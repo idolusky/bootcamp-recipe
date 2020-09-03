@@ -13,6 +13,7 @@ const fetchData = function () {
                 thumbnail: r.thumbnail
             }
         })
+        console.log(recipes);
         renderer.renderData(recipes)
         rec = recipes
     })
